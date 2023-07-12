@@ -21,6 +21,10 @@
     <Target Name="CargoBuild" BeforeTargets="BeforeBuild">
         <Exec Command="cargo build --target wasm32-unknown-unknown --release" WorkingDirectory="..\hello-wasm" />
     </Target>
+
+    <Target Name="CargoClean" BeforeTargets="AfterClean">
+        <Exec Command="cargo clean" WorkingDirectory="..\hello-wasm" />
+    </Target>
     
     <ItemGroup>
         <NativeFileReference Include="..\hello-wasm\target\wasm32-unknown-unknown\release\libhello_wasm.a" />
