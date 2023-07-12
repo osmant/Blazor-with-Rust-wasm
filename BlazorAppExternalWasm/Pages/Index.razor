@@ -1,0 +1,23 @@
+﻿@page "/"
+@using System.Runtime.InteropServices
+
+<h3>Increment Value</h3>
+
+<p>Enter a value:</p>
+<input type="number" @bind="_inputValue" @bind:after="HandleInput" @bind:event="oninput" />
+
+<p>Result: @_result</p>
+
+@code
+{
+    private int _inputValue = 0;
+    private int _result = 1;
+
+    [DllImport("libhello_wasm")]
+    static extern int add_one(int x);
+
+    private void HandleInput()
+    {
+        _result = add_one(_inputValue);
+    }
+}
