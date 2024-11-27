@@ -4,6 +4,10 @@ This app is created to experiment how Blazor WebAssembly app can use `wasm` modu
 
 To be able to run the app follow the steps below.
 
+**Pre-requisites**
+- .NET 8.0 SDK that can be downloaded from [here](https://dotnet.microsoft.com/en-us/download/dotnet)
+- Rust toolchain that can be downloaded from [here](https://www.rust-lang.org/tools/install)
+
 1. Clone the repo
 2. Open BlazorAppExternalWasm project or folder
    - If you are using Visual Studio or Rider or other IDE, simply run the project using the IDE.
